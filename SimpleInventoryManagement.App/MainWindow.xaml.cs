@@ -31,7 +31,6 @@ namespace SimpleInventoryManagement.App
         {
             if (!isLoggedIn)
             {
-                // Perform login actions
                 var loginDialog = new LoginDialog();
                 if (loginDialog.ShowDialog() == true)
                 {
@@ -44,11 +43,16 @@ namespace SimpleInventoryManagement.App
             }
             else
             {
-                isLoggedIn = false;
-                ChangeToLoginState();
-                UserTextBlock.Text = string.Empty;
-                MainFrame.Content = null;
-                MainFrame.Background = Brushes.LightGray;
+                MessageBoxResult result = MessageBox.Show("Are you sure you want to log out?", "Confirm Logout", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+                if (result == MessageBoxResult.Yes)
+                {
+                    isLoggedIn = false;
+                    ChangeToLoginState();
+                    UserTextBlock.Text = string.Empty;
+                    MainFrame.Content = null;
+                    MainFrame.Background = Brushes.LightGray;
+                }
             }
         }
 

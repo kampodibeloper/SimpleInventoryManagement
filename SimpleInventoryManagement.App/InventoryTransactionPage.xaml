@@ -18,7 +18,8 @@
                         <ColumnDefinition Width="70*"/>
                     </Grid.ColumnDefinitions>
                     <!-- StackPanel to contain forms and search bar -->
-                    <StackPanel>
+                    <StackPanel
+                        Margin="15,5,20,0">
                         <!-- SearchBar -->
                         <TextBlock 
                             Text="Search..."
@@ -48,7 +49,7 @@
                         <!-- Forms to add and update items -->
                         <TextBlock 
                             Text="Item Name"
-                            Margin="5,15,5,0"
+                            Margin="5,20,5,0"
                             FontWeight="Light"/>
                         <TextBox x:Name="ItemNameTextBox" Margin="5"/>
                         <TextBlock 
