@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="MyInventoryManagement">
+  <DataContextMoniker Name="/MyInventoryManagementDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d8b888eb-468e-4fdb-bbfc-02ec78428c38" absoluteBounds="0.875, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/MyInventoryManagementDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d4a09a33-fb7a-4cb1-b7de-32db38071ca8" absoluteBounds="0.88999999999999968, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a88d52b3-b6cb-4b56-bf6e-954afa7b7252" absoluteBounds="1.875, 2.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/MyInventoryManagementDataContext/Transaction" />
+      <nestedChildShapes>
+        <elementListCompartment Id="22de44f7-4985-48e7-b936-7052abe5edd7" absoluteBounds="1.8899999999999997, 3.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.375 : 1.8862939453125); (2.375 : 2.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyInventoryManagementDataContext/User/User_Transaction" />
+      <nodes>
+        <classShapeMoniker Id="d8b888eb-468e-4fdb-bbfc-02ec78428c38" />
+        <classShapeMoniker Id="a88d52b3-b6cb-4b56-bf6e-954afa7b7252" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="73291fc5-b5e7-49e6-bc66-d91bbde1d854" absoluteBounds="4.875, 0.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/MyInventoryManagementDataContext/Inventory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6e7633f8-0fa6-4c5d-bff0-c1c5d61258e6" absoluteBounds="4.89, 0.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.875 : 2.20599609375); (3.40625 : 2.20599609375); (3.40625 : 2.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyInventoryManagementDataContext/Inventory/Inventory_Transaction" />
+      <nodes>
+        <classShapeMoniker Id="73291fc5-b5e7-49e6-bc66-d91bbde1d854" />
+        <classShapeMoniker Id="a88d52b3-b6cb-4b56-bf6e-954afa7b7252" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
